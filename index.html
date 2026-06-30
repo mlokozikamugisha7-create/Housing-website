@@ -19,14 +19,23 @@ nav{
   z-index:100;
 }
 nav h2{color:#fff}
+nav div{
+  display:flex;
+  gap:25px;
+}
 nav a{
-  color:white;
+  color:#fff;
   text-decoration:none;
-  margin-left:20px;
   font-weight:bold;
+  font-size:16px;
+  padding:8px 12px;
+  border-radius:5px;
   transition:.3s;
 }
-nav a:hover{color:#25D366}
+nav a:hover{
+  background:rgba(255,255,255,.2);
+  color:#25D366;
+}
 .hero{
   height:90vh;
   background:url("https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1400&q=80") center/cover;
@@ -101,6 +110,14 @@ section{
   background:#25D366;
   transform:translateY(-3px);
 }
+#contact a{
+  color:#0d47a1;
+  text-decoration:none;
+  font-weight:bold;
+}
+#contact a:hover{
+  color:#25D366;
+}
 footer{
   background:#0d47a1;
   color:white;
@@ -119,6 +136,20 @@ footer{
 @keyframes float{
   0%,100%{transform:translateY(0px)}
   50%{transform:translateY(-5px)}
+}
+
+/* Mobile responsive */
+@media(max-width:768px){
+  nav{
+    flex-direction:column;
+    gap:10px;
+  }
+  nav div{
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+  .hero h1{font-size:32px}
 }
 </style>
 
@@ -174,14 +205,13 @@ footer{
 
 <section id="about">
   <h2>Kuhusu Sisi</h2>
-  <p>Tunauza na kupangisha nyumba za kisasa Tanzania nzima.</p>
+  <p>Tunauza na kupangisha nyumba za kisasa Tanzania nzima. Wasiliana nasi upate nyumba ya ndoto zako kwa bei nafuu na yenye ubora wa hali ya juu.</p>
 </section>
 
 <section id="contact">
   <h2>Mawasiliano</h2>
-  <p>Simu: 0768931694</p>
-  <p>WhatsApp: <a href="https://wa.me/255768931694" target="_blank">0768931694</a></p>
-  <p>Email: mlokozikamugisha7@gmail.com</p>
+  <p>Simu/WhatsApp: <a href="https://wa.me/255768931694">0768931694</a></p>
+  <p>Email: <a href="mailto:mlokozikamugisha7@gmail.com">mlokozikamugisha7@gmail.com</a></p>
 </section>
 
 <footer>
